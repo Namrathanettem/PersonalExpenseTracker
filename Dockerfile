@@ -1,4 +1,3 @@
-
 FROM eclipse-temurin:21-jdk-jammy
 
 RUN apt-get update \
@@ -9,10 +8,9 @@ WORKDIR /app
 
 COPY . .
 
-RUN g++ backend/main.cpp -o backend/expense \
+RUN g++ main.cpp -o expense \
     && javac server/ExpenseServer.java
 
 EXPOSE 10000
 
 CMD ["java", "-cp", "server", "ExpenseServer"]
-
