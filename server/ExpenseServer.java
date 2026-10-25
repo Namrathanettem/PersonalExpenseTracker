@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 public class ExpenseServer {
 
     private static final Path WEB =
-            Paths.get("/app/web").toAbsolutePath().normalize();
+            Paths.get("/app").toAbsolutePath().normalize();
 
     public static void main(String[] args) throws Exception {
 
